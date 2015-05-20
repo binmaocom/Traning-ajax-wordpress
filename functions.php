@@ -110,3 +110,24 @@ function rs_load_page_ajax(){
 	wp_reset_postdata();
 	die();
 }
+
+
+//add ajax function to ajax load more wordpress
+add_action('wp_ajax_rs_load_more_ajax', 'rs_load_more_ajax');
+add_action('wp_ajax_nopriv_rs_load_more_ajax', 'rs_load_more_ajax'); 
+function rs_load_more_ajax(){
+	sleep(1);
+	global $post;
+	$post_id = ( $_POST['post_id'] );
+	$post_id = str_replace('post-','',$post_id);
+	$post_id = (int) $post_id;
+	$custom_posts = get_post($post_id);
+	?>
+			<?php 
+			$content = $custom_posts->post_content;
+			echo apply_filters('the_content', $content);
+			?>
+	<?php
+	wp_reset_postdata();
+	die();
+}
