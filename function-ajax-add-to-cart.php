@@ -6,11 +6,15 @@ function add_to_cart_action_javascript() {?>
 		$(document).on('click','.button_add_car',function(event){
 			current_click = this;
 			$(current_click).parents('.summary').find('.ajax_loading').show();
-			href = $(this).attr('href');
-			href += $('#number_quantity').val();
+			var product_id	= $(this).attr('data-product_id');
+			var quantity	= $('#number_quantity').val();
 			$.ajax({
 				type: "GET",
 				url: '<?php echo admin_url( "admin-ajax.php" ); ?>',
+				data: {
+					'product_id'	: product_id,
+					'quantity'		: quantity
+				}
 			})
 			.done(function(){
 				$(current_click).parents('.summary').find('.ajax_loading').hide();
@@ -34,4 +38,4 @@ function add_to_car_customer(){
 }
 ?>
 <!-- button add to cart in frontend -->
-<a class="button_add_car" href="<?php echo home_url() ?>/?product_id=<?php echo $post->ID ?>&quantity=">Add to Cart</a>
+<a class="button_add_car" data-product_id="<?php echo $post->ID; ?>" href="<?php echo home_url(); ?>/?product_id=<?php echo $post->ID; ?>&quantity=">Add to Cart</a>
