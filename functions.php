@@ -59,15 +59,6 @@ function rs_add_jquery_ajax(){
 			});
 		});
 	</script>
-	<style type="text/css">
-	#load-more .post-title{	
-		-webkit-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-		-moz-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-		-ms-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-		-o-transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-		transition: 1000ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-	}
-	</style>
 <?php
 }
 add_action('wp_footer','rs_add_jquery_ajax');
