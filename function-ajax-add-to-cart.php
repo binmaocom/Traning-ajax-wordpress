@@ -6,7 +6,7 @@ function add_to_cart_action_javascript() {?>
 		$(document).on('click','.button_add_car',function(event){
 			current_click = this;
 			$(current_click).parents('.summary').find('.ajax_loading').show();
-			var product_id	= $(this).attr('data-product_id');
+			var product_id	= $(this).attr('data-product-id');
 			var quantity	= $('#number_quantity').val();
 			$.ajax({
 				type: "GET",
@@ -38,4 +38,4 @@ function add_to_car_customer(){
 }
 ?>
 <!-- button add to cart in frontend -->
-<a class="button_add_car" data-product_id="<?php echo $post->ID; ?>" href="<?php echo home_url(); ?>/?product_id=<?php echo $post->ID; ?>&quantity=">Add to Cart</a>
+<a class="button_add_car" data-product-id="<?php echo $post->ID; ?>" href="<?php echo home_url(); ?>/?product_id=<?php echo $post->ID; ?>&quantity=">Add to Cart</a>
