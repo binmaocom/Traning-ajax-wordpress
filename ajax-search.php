@@ -34,7 +34,7 @@ function rs_load_search_ajax_callback(){
 	wp_reset_postdata();
 	die();
 }
-
+?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($){
 			//ajax load search content
