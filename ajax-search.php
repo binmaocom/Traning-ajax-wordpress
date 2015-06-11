@@ -35,8 +35,9 @@ function rs_load_search_ajax_callback(){
 	die();
 }
 
-jQuery(document).ready(function($){
-//ajax load search content
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			//ajax load search content
 			var time_out;
 			$(document).on('keyup','#search-input',function(e){
 				var search_input = $(this);
