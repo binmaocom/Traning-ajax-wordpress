@@ -1,5 +1,5 @@
 <?php
-/*Template Name: Page ajax */
+/*Template Name: Page test ajax */
 /**
  * The template for displaying pages
  *
@@ -16,7 +16,15 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<div class="box-search post type-post status-publish format-standard hentry category-uncategorized">
+				<div class="entry-content">
+					<div class="stop-ajax"><h3>Stop all ajax</h3></div>
+					<h2 class="entry-title">Box search</h2>
+					<input type="text" id="search-input" name="search-input" placeholder="Enter search key" />
+					<ul class="box-result-search">
+					</ul>
+				</div>
+			</div>
 			<?php
 			$args = array( 
 				'orderby'			=>	'date',
@@ -63,109 +71,11 @@ get_header(); ?>
 						<a id="load-more" rel="prev" href="#">
 							<span class="post-title">Load more</span>
 						</a>
-						<style>
-							#circleG{
-								width:149.33333333333334px;
-							}
-							.circleG{
-								background-color:#FFFFFF;
-								float:left;
-								height:32px;
-								margin-left:17px;
-								width:32px;
-								-moz-animation-name:bounce_circleG;
-								-moz-animation-duration:1.9500000000000002s;
-								-moz-animation-iteration-count:infinite;
-								-moz-animation-direction:normal;
-								-moz-border-radius:21px;
-								-webkit-animation-name:bounce_circleG;
-								-webkit-animation-duration:1.9500000000000002s;
-								-webkit-animation-iteration-count:infinite;
-								-webkit-animation-direction:normal;
-								-webkit-border-radius:21px;
-								-ms-animation-name:bounce_circleG;
-								-ms-animation-duration:1.9500000000000002s;
-								-ms-animation-iteration-count:infinite;
-								-ms-animation-direction:normal;
-								-ms-border-radius:21px;
-								-o-animation-name:bounce_circleG;
-								-o-animation-duration:1.9500000000000002s;
-								-o-animation-iteration-count:infinite;
-								-o-animation-direction:normal;
-								-o-border-radius:21px;
-								animation-name:bounce_circleG;
-								animation-duration:1.9500000000000002s;
-								animation-iteration-count:infinite;
-								animation-direction:normal;
-								border-radius:21px;
-							}
-							#circleG_1{
-								-moz-animation-delay:0.39s;
-								-webkit-animation-delay:0.39s;
-								-ms-animation-delay:0.39s;
-								-o-animation-delay:0.39s;
-								animation-delay:0.39s;
-							}
-							#circleG_2{
-								-moz-animation-delay:0.9099999999999999s;
-								-webkit-animation-delay:0.9099999999999999s;
-								-ms-animation-delay:0.9099999999999999s;
-								-o-animation-delay:0.9099999999999999s;
-								animation-delay:0.9099999999999999s;
-							}
-							#circleG_3{
-								-moz-animation-delay:1.1700000000000002s;
-								-webkit-animation-delay:1.1700000000000002s;
-								-ms-animation-delay:1.1700000000000002s;
-								-o-animation-delay:1.1700000000000002s;
-								animation-delay:1.1700000000000002s;
-							}
-							@-moz-keyframes bounce_circleG{
-								0%{
-								}
-								50%{
-									background-color:#000000}
-								100%{
-								}
-							}
-							@-webkit-keyframes bounce_circleG{
-								0%{
-								}
-								50%{
-									background-color:#000000}
-								100%{
-								}
-							}
-							@-ms-keyframes bounce_circleG{
-								0%{
-								}
-								50%{
-									background-color:#000000}
-								100%{
-								}
-							}
-							@-o-keyframes bounce_circleG{
-								0%{
-								}
-								50%{
-									background-color:#000000}
-								100%{
-								}
-							}
-							@keyframes bounce_circleG{
-								0%{
-								}
-								50%{
-									background-color:#000000}
-								100%{
-								}
-							}
-							</style>
-							<div id="circleG" style="display: none; padding-bottom: 65px;">
-								<div id="circleG_1" class="circleG"></div>
-								<div id="circleG_2" class="circleG"></div>
-								<div id="circleG_3" class="circleG"></div>
-							</div>
+						<div id="circleG" style="display: none; padding-bottom: 65px;">
+							<div id="circleG_1" class="circleG"></div>
+							<div id="circleG_2" class="circleG"></div>
+							<div id="circleG_3" class="circleG"></div>
+						</div>
 					</div>
 				</div>
 			</nav>
